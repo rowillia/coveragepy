@@ -395,5 +395,4 @@ class FileReporter(object):
     def __ge__(self, other):
         return self.filename >= other.filename
 
-    def __hash__(self):
-        return hash(self.filename)
+    __hash__ = None
