@@ -241,6 +241,10 @@ class CmdOptionParser(CoverageOptionParser):
         # results, and they will compare equal to objects.
         return (other == "<CmdOptionParser:%s>" % self.cmd)
 
+    # Set __hash__ to None in order to make this object unhashable in Python 2
+    # As well as Python 3.
+    __hash__ = None
+
     def get_prog_name(self):
         """Override of an undocumented function in optparse.OptionParser."""
         program_name = super(CmdOptionParser, self).get_prog_name()
