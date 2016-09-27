@@ -3,6 +3,8 @@
 
 """XML reporting for coverage.py"""
 
+from __future__ import division
+
 import os
 import os.path
 import sys
